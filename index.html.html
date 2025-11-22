@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyberg Financial - Simplified Tax & Accounting Solutions</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ocean-deep': '#0C4A6E',
+                        'ocean': '#0369A1',
+                        'ocean-light': '#0EA5E9',
+                        'sand': '#D4A574',
+                        'sand-light': '#F5E6D3',
+                        'coral': '#FF8B6A',
+                        'seafoam': '#4FD1C5',
+                        'sunset': '#F97316',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Fixed Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Brand -->
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold text-ocean-deep">Nyberg Financial</a>
+                </div>
+                
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">Home</a>
+                    <a href="#services" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">Services</a>
+                    <a href="https://nybergfinancial.taxdome.com" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">Client Portal</a>
+                    <a href="#about" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">About Us</a>
+                    <a href="#contact" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-ocean hover:text-seafoam focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="#home" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">Home</a>
+                <a href="#services" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">Services</a>
+                <a href="https://nybergfinancial.taxdome.com" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">Client Portal</a>
+                <a href="#about" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">About Us</a>
+                <a href="#contact" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-ocean-deep to-ocean">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                    Simplified Tax & Accounting for Your Future.
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-100 mb-10 max-w-3xl mx-auto">
+                    Nyberg Financial provides secure, comprehensive solutions tailored to modern businesses and individuals.
+                </p>
+                <a href="https://nybergfinancial.taxdome.com" 
+                   class="inline-block bg-seafoam hover:bg-seafoam/90 text-ocean-deep font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
+                    Access Client Portal
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Overview Section -->
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-ocean-deep mb-4">Our Services</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Comprehensive financial solutions designed to help you thrive
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1: Tax Preparation -->
+                <div class="bg-sand-light rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8">
+                    <div class="flex justify-center mb-6">
+                        <div class="bg-seafoam/20 p-4 rounded-full">
+                            <i data-lucide="file-text" class="w-12 h-12 text-ocean"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-ocean-deep mb-4 text-center">Tax Preparation & E-Filing</h3>
+                    <p class="text-gray-600 text-center">
+                        Expert tax preparation services with secure electronic filing. We maximize your deductions while ensuring full compliance with current tax regulations.
+                    </p>
+                </div>
+                
+                <!-- Service 2: Business Accounting -->
+                <div class="bg-sand-light rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8">
+                    <div class="flex justify-center mb-6">
+                        <div class="bg-seafoam/20 p-4 rounded-full">
+                            <i data-lucide="calculator" class="w-12 h-12 text-ocean"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-ocean-deep mb-4 text-center">Business Accounting & Bookkeeping</h3>
+                    <p class="text-gray-600 text-center">
+                        Professional bookkeeping and accounting services to keep your business finances organized, accurate, and ready for growth opportunities.
+                    </p>
+                </div>
+                
+                <!-- Service 3: Financial Consulting -->
+                <div class="bg-sand-light rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8">
+                    <div class="flex justify-center mb-6">
+                        <div class="bg-seafoam/20 p-4 rounded-full">
+                            <i data-lucide="trending-up" class="w-12 h-12 text-ocean"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-ocean-deep mb-4 text-center">Financial Consulting & Planning</h3>
+                    <p class="text-gray-600 text-center">
+                        Strategic financial planning and consulting to help you achieve your long-term goals with confidence and clarity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Client Portal Integration Section -->
+    <section id="portal" class="py-16 md:py-24 bg-gradient-to-br from-sand-light to-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-sand/20">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-ocean-deep mb-6">
+                        Seamless, Secure Client Experience.
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+                        All secure communication, document uploads, and task management is handled through our integrated, professional portal, powered by TaxDome.
+                    </p>
+                    <div class="bg-seafoam/10 border-l-4 border-seafoam rounded-lg p-6 mb-8">
+                        <p class="text-gray-700">
+                            <strong>Portal Access:</strong> Our secure client portal is hosted at 
+                            <a href="https://nybergfinancial.taxdome.com" class="text-ocean hover:underline font-semibold">
+                                nybergfinancial.taxdome.com
+                            </a>
+                            where you can access your TaxDome account.
+                        </p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="flex justify-center mb-3">
+                                <i data-lucide="shield-check" class="w-10 h-10 text-ocean"></i>
+                            </div>
+                            <h4 class="font-semibold text-ocean-deep mb-2">Bank-Level Security</h4>
+                            <p class="text-sm text-gray-600">Your data is protected with enterprise-grade encryption</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="flex justify-center mb-3">
+                                <i data-lucide="upload-cloud" class="w-10 h-10 text-ocean"></i>
+                            </div>
+                            <h4 class="font-semibold text-ocean-deep mb-2">Easy Document Sharing</h4>
+                            <p class="text-sm text-gray-600">Upload and access files securely anytime, anywhere</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="flex justify-center mb-3">
+                                <i data-lucide="message-circle" class="w-10 h-10 text-ocean"></i>
+                            </div>
+                            <h4 class="font-semibold text-ocean-deep mb-2">Direct Communication</h4>
+                            <p class="text-sm text-gray-600">Message your financial team directly within the portal</p>
+                        </div>
+                    </div>
+                    <a href="https://nybergfinancial.taxdome.com" 
+                       class="inline-block bg-seafoam hover:bg-seafoam/90 text-ocean-deep font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
+                        Access Client Portal
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-ocean-deep mb-6">About Us</h2>
+            <div class="mb-8">
+                <p class="text-xl font-semibold text-ocean mb-2">Serving San Diego Since 1978</p>
+                <div class="w-24 h-1 bg-seafoam mx-auto rounded-full"></div>
+            </div>
+            <p class="text-lg text-gray-600 mb-6">
+                For over four decades, Nyberg Financial has been a trusted partner for individuals and businesses throughout the San Diego area. Led by Cameron Attsha, CPA, we believe in building lasting relationships with our clients through transparency, expertise, and personalized service. Our team of experienced professionals is dedicated to helping you navigate the complexities of tax preparation, accounting, and financial planning.
+            </p>
+            <p class="text-lg text-gray-600">
+                Whether you're an individual seeking tax assistance or a business looking for comprehensive financial solutions, we're here to simplify your financial journey and help you achieve your goals with confidence.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-sand-light">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-ocean-deep mb-4">Get In Touch</h2>
+                <p class="text-lg text-gray-600">
+                    We're here to answer your questions and discuss how we can help with your financial needs.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md p-8 md:p-12">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-semibold text-ocean-deep mb-2">Cameron Attsha, CPA</h3>
+                    <p class="text-gray-600">Owner & Principal</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-ocean-deep mb-4 flex items-center">
+                            <i data-lucide="mail" class="w-5 h-5 mr-2 text-seafoam"></i>
+                            Mailing Address
+                        </h3>
+                        <p class="text-gray-600">
+                            PO Box 230927<br>
+                            Encinitas, CA 92023
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-ocean-deep mb-4 flex items-center">
+                            <i data-lucide="phone" class="w-5 h-5 mr-2 text-seafoam"></i>
+                            Contact Information
+                        </h3>
+                        <p class="text-gray-600">
+                            Phone: 760-753-3555<br>
+                            Email: <a href="mailto:cameron@attishacpa.com" class="text-ocean hover:text-seafoam transition-colors">cameron@attishacpa.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-ocean-deep text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-lg font-semibold mb-2">Nyberg Financial</p>
+                <p class="text-gray-300 mb-2">PO Box 230927, Encinitas, CA 92023</p>
+                <p class="text-sm text-seafoam font-medium mb-4">Serving the community since 1978</p>
+                <p class="text-sm text-gray-400">
+                    &copy; 2025 Nyberg Financial Services, Inc. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript for Mobile Menu Toggle and Smooth Scrolling -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling is handled by the 'scroll-smooth' class on the html element
+        // Additional smooth scroll behavior for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    const offsetTop = target.offsetTop - 64; // Account for fixed nav height
+                    
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
