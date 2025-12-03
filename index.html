@@ -38,11 +38,15 @@
         }
     </script>
     
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+   <style>
+    /* Custom CSS for La Jolla Hero Image */
+    .bg-la-jolla {
+        background-image: url('la-jolla-backdrop.jpg'); /* Ensure this filename matches your uploaded image */
+        background-size: cover; 
+        background-position: center top; 
+        background-repeat: no-repeat;
+    }
+</style>
 </head>
 <body class="bg-gray-50">
     
@@ -88,22 +92,24 @@
     </nav>
     
     <!-- Hero Section -->
-    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-ocean-deep to-ocean">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                    Simplified Tax & Accounting for Your Future.
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-100 mb-10 max-w-3xl mx-auto">
-                    Nyberg Financial provides secure, comprehensive solutions tailored to modern businesses and individuals.
-                </p>
-                <a href="https://nybergfinancial.taxdome.com" 
-                   class="inline-block bg-seafoam hover:bg-seafoam/90 text-ocean-deep font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
-                    Access Client Portal
-                </a>
-            </div>
+   <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-la-jolla relative overflow-hidden">
+    <div class="absolute inset-0 bg-ocean-deep opacity-80"></div> 
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                Simplified Tax & Accounting for Your Future.
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-100 mb-10 max-w-3xl mx-auto">
+                Nyberg Financial provides secure, comprehensive solutions tailored to modern businesses and individuals.
+            </p>
+            <a href="https://nybergfinancial.taxdome.com" 
+               class="inline-block bg-seafoam hover:bg-seafoam/90 text-ocean-deep font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
+                Access Client Portal
+            </a>
         </div>
-    </section>
+    </div>
+</section>
     
     <!-- Services Overview Section -->
     <section id="services" class="py-16 md:py-24 bg-white">
