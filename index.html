@@ -175,7 +175,7 @@
                 </p>
             </div>
             
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-16">
                 <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-200">
                     <div>
                         <h3 class="text-xl font-bold text-ocean-deep mb-2">Standard Individual</h3>
@@ -241,7 +241,136 @@
                     </div>
                 </div>
             </div>
-            
+
+            <!-- INTERACTIVE ESTIMATOR TOOL -->
+            <div class="max-w-4xl mx-auto bg-slate-900 text-white rounded-3xl shadow-2xl overflow-hidden border border-slate-800 mb-12">
+                <div class="p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 border-b border-slate-800 pb-6">
+                        <div>
+                            <span class="text-xs font-bold tracking-widest text-seafoam uppercase">Interactive Tool</span>
+                            <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-1">Estimate Your Custom Fee</h3>
+                        </div>
+                        <p class="text-sm text-slate-400 max-w-xs md:text-right">
+                            Adjust variables below to calculate your estimated base pricing bracket for the 2026 tax year.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 items-start">
+                        <!-- Inputs Column -->
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-300 mb-2">1. Select Return Type</label>
+                                <select id="est-entity" class="w-full bg-slate-800 border border-slate-700 text-white px-4 py-3 rounded-lg focus:ring-2 focus:ring-seafoam focus:border-transparent outline-none">
+                                    <option value="1040" data-base="350">Individual Return (Form 1040) — Base $350</option>
+                                    <option value="1040s" data-base="750">Investor & Specialized (1040 Schedules) — Base $750</option>
+                                    <option value="1065" data-base="1500">Partnership / LLC (Form 1065) — Base $1,500</option>
+                                    <option value="1120" data-base="1800">S-Corp / C-Corp (Form 1120/S) — Base $1,800</option>
+                                    <option value="1041" data-base="1200">Fiduciary Trust & Estate (Form 1041) — Base $1,200</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-300 mb-2">2. Are you filing a California return?</label>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <label class="flex items-center justify-between p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                        <span class="text-sm font-medium">Yes, in California</span>
+                                        <input type="radio" name="est-ca" value="yes" checked class="accent-seafoam w-4 h-4">
+                                    </label>
+                                    <label class="flex items-center justify-between p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                        <span class="text-sm font-medium">Out of State Only</span>
+                                        <input type="radio" name="est-ca" value="no" class="accent-seafoam w-4 h-4">
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-300 mb-2">3. Bookkeeping Reconciliation Quality</label>
+                                <div class="space-y-3">
+                                    <label class="flex items-start p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                        <input type="radio" name="est-books" value="clean" checked class="accent-seafoam w-4 h-4 mt-1 mr-3 shrink-0">
+                                        <div>
+                                            <p class="text-sm font-medium">Clean & Fully Reconciled</p>
+                                            <p class="text-xs text-slate-400">Books balance, retained earnings match prior year tax returns.</p>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-start p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                        <input type="radio" name="est-books" value="messy" class="accent-seafoam w-4 h-4 mt-1 mr-3 shrink-0">
+                                        <div>
+                                            <p class="text-sm font-medium text-amber-400">Needs Cleanup / Reconciliation</p>
+                                            <p class="text-xs text-slate-400">Unreconciled bank/credit accounts, unbalanced balance sheet, or unsure.</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-300 mb-2">4. Add-on Complexity Metrics</label>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <label class="flex items-center p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                        <input type="checkbox" id="est-assets" class="accent-seafoam w-4 h-4 mr-3 shrink-0">
+                                        <span class="text-xs font-medium text-slate-300">New Assets / Depr. Tracker (+$200)</span>
+                                    </label>
+                                    <label class="flex items-center p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                        <input type="checkbox" id="est-multistate" class="accent-seafoam w-4 h-4 mr-3 shrink-0">
+                                        <span class="text-xs font-medium text-slate-300">Multi-State Returns (+$250)</span>
+                                    </label>
+                                    <label class="flex items-center p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                        <input type="checkbox" id="est-crypto" class="accent-seafoam w-4 h-4 mr-3 shrink-0">
+                                        <span class="text-xs font-medium text-slate-300">Crypto/Active Trading (+$200)</span>
+                                    </label>
+                                    <label class="flex items-center p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                        <input type="checkbox" id="est-rentals" class="accent-seafoam w-4 h-4 mr-3 shrink-0">
+                                        <span class="text-xs font-medium text-slate-300">Rental Property Schedule (+$150)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Results Column -->
+                        <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 flex flex-col justify-between h-full">
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Estimated Range Summary</h4>
+                                
+                                <div class="mb-6">
+                                    <span class="text-xs text-slate-400 block">Calculated Bracket</span>
+                                    <div class="flex items-baseline gap-2">
+                                        <span id="est-final-range" class="text-4xl md:text-5xl font-extrabold text-seafoam">$350 - $450</span>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-4 border-t border-slate-700 pt-4 mb-6">
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-slate-400">Baseline Prep Fee:</span>
+                                        <span id="est-summary-base" class="font-semibold text-white">$350</span>
+                                    </div>
+                                    <div id="est-ca-fee-row" class="flex justify-between text-sm">
+                                        <span class="text-slate-400">California Regulatory Compliance:</span>
+                                        <span class="font-semibold text-seafoam">Included</span>
+                                    </div>
+                                    <div id="est-cleanup-row" class="hidden flex-col bg-amber-950/30 border border-amber-900/50 rounded-lg p-3 text-xs text-amber-300 space-y-1">
+                                        <p class="font-bold flex items-center">
+                                            <i data-lucide="alert-triangle" class="w-3.5 h-3.5 mr-1.5 shrink-0"></i>
+                                            Accounting Cleanup Required
+                                        </p>
+                                        <p>Because books are unreconciled, custom trial balance construction is required. This will be billed as a separate project at a standard rate of <strong>$150/hr</strong>.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="https://nybergfinancial.taxdome.com" 
+                                   class="block text-center bg-seafoam hover:bg-seafoam/90 text-ocean-deep font-bold py-4 px-6 rounded-xl transition-all shadow-lg hover:shadow-seafoam/20">
+                                    Upload Documents & Lock Quote
+                                </a>
+                                <p class="text-[10px] text-slate-400 mt-4 text-center italic">
+                                    Disclaimer: Estimates are intended for budgeting purposes. Official quotes are programmatically rendered following a technical review of prior year filings and structural business books.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="mt-8 bg-gray-50 rounded-xl p-4 text-center border border-gray-200 text-sm text-gray-600 max-w-2xl mx-auto">
                 💼 <strong>Fiduciary Trust & Estate Tax Returns (Form 1041):</strong> Scoped individually due to specific asset parameters. Rates begin at a baseline of <strong>$1,200</strong>.
             </div>
@@ -469,6 +598,75 @@
                 }
             });
         });
+
+        // Interactive Pricing Calculator Logic
+        const entitySelect = document.getElementById('est-entity');
+        const caRadioYes = document.querySelector('input[name="est-ca"][value="yes"]');
+        const caRadioNo = document.querySelector('input[name="est-ca"][value="no"]');
+        const booksRadioClean = document.querySelector('input[name="est-books"][value="clean"]');
+        const booksRadioMessy = document.querySelector('input[name="est-books"][value="messy"]');
+        const checkAssets = document.getElementById('est-assets');
+        const checkMultistate = document.getElementById('est-multistate');
+        const checkCrypto = document.getElementById('est-crypto');
+        const checkRentals = document.getElementById('est-rentals');
+
+        const finalRangeText = document.getElementById('est-final-range');
+        const summaryBaseText = document.getElementById('est-summary-base');
+        const caFeeRow = document.getElementById('est-ca-fee-row');
+        const cleanupRow = document.getElementById('est-cleanup-row');
+
+        function calculateEstimate() {
+            // Get base fee from selection
+            const selectedOption = entitySelect.options[entitySelect.selectedIndex];
+            const baseValue = parseInt(selectedOption.getAttribute('data-base'), 10);
+            
+            let finalBase = baseValue;
+            let complexityAddition = 0;
+
+            // Calculate state/California variables
+            const isCA = caRadioYes.checked;
+            if (isCA) {
+                caFeeRow.classList.remove('hidden');
+            } else {
+                caFeeRow.classList.add('hidden');
+            }
+
+            // Bookkeeping clean up warning trigger
+            const isMessy = booksRadioMessy.checked;
+            if (isMessy) {
+                cleanupRow.classList.remove('hidden');
+                cleanupRow.classList.add('flex');
+            } else {
+                cleanupRow.classList.add('hidden');
+                cleanupRow.classList.remove('flex');
+            }
+
+            // Check checkboxes
+            if (checkAssets.checked) complexityAddition += 200;
+            if (checkMultistate.checked) complexityAddition += 250;
+            if (checkCrypto.checked) complexityAddition += 200;
+            if (checkRentals.checked) complexityAddition += 150;
+
+            const totalBase = finalBase + complexityAddition;
+            
+            // Set range parameters (typically baseline to +25% buffer depending on audit risk/reconciliation overhead)
+            const rangeLow = totalBase;
+            const rangeHigh = Math.round(totalBase * 1.25);
+
+            // Update DOM Elements
+            summaryBaseText.textContent = `$${finalBase}`;
+            finalRangeText.textContent = `$${rangeLow.toLocaleString()} - $${rangeHigh.toLocaleString()}`;
+        }
+
+        // Attach event listeners to all fields
+        [entitySelect, caRadioYes, caRadioNo, booksRadioClean, booksRadioMessy, checkAssets, checkMultistate, checkCrypto, checkRentals].forEach(element => {
+            if (element) {
+                element.addEventListener('change', calculateEstimate);
+            }
+        });
+
+        // Run initial load calculations
+        calculateEstimate();
     </script>
 </body>
 </html>
