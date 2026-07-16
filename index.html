@@ -242,7 +242,6 @@
                 </div>
             </div>
 
-            <!-- INTERACTIVE ESTIMATOR TOOL -->
             <div class="max-w-4xl mx-auto bg-slate-900 text-white rounded-3xl shadow-2xl overflow-hidden border border-slate-800 mb-12">
                 <div class="p-8 md:p-12">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 border-b border-slate-800 pb-6">
@@ -256,7 +255,6 @@
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-8 items-start">
-                        <!-- Inputs Column -->
                         <div class="space-y-6">
                             <div>
                                 <label class="block text-sm font-semibold text-slate-300 mb-2">1. Select Return Type</label>
@@ -305,28 +303,30 @@
 
                             <div>
                                 <label class="block text-sm font-semibold text-slate-300 mb-2">4. Add-on Complexity Metrics</label>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                    <label class="flex items-center p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
-                                        <input type="checkbox" id="est-assets" class="accent-seafoam w-4 h-4 mr-3 shrink-0">
-                                        <span class="text-xs font-medium text-slate-300">New Assets / Depr. Tracker (+$200)</span>
-                                    </label>
-                                    <label class="flex items-center p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
-                                        <input type="checkbox" id="est-multistate" class="accent-seafoam w-4 h-4 mr-3 shrink-0">
-                                        <span class="text-xs font-medium text-slate-300">Multi-State Returns (+$250)</span>
-                                    </label>
-                                    <label class="flex items-center p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
-                                        <input type="checkbox" id="est-crypto" class="accent-seafoam w-4 h-4 mr-3 shrink-0">
-                                        <span class="text-xs font-medium text-slate-300">Crypto/Active Trading (+$200)</span>
-                                    </label>
-                                    <label class="flex items-center p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
-                                        <input type="checkbox" id="est-rentals" class="accent-seafoam w-4 h-4 mr-3 shrink-0">
-                                        <span class="text-xs font-medium text-slate-300">Rental Property Schedule (+$150)</span>
-                                    </label>
+                                <div class="space-y-3">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                        <label class="flex items-center p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                            <input type="checkbox" id="est-assets" class="accent-seafoam w-4 h-4 mr-3 shrink-0">
+                                            <span class="text-xs font-medium text-slate-300">New Assets / Depr. Tracker (+$200)</span>
+                                        </label>
+                                        <label class="flex items-center p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                            <input type="checkbox" id="est-multistate" class="accent-seafoam w-4 h-4 mr-3 shrink-0">
+                                            <span class="text-xs font-medium text-slate-300">Multi-State Returns (+$250)</span>
+                                        </label>
+                                        <label class="flex items-center p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                            <input type="checkbox" id="est-crypto" class="accent-seafoam w-4 h-4 mr-3 shrink-0">
+                                            <span class="text-xs font-medium text-slate-300">Crypto/Active Trading (+$200)</span>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="flex items-center justify-between p-3 rounded-lg border border-slate-700 bg-slate-800">
+                                        <span class="text-xs font-medium text-slate-300">Number of Rental Properties (+$150 each)</span>
+                                        <input type="number" id="est-rentals-qty" min="0" max="50" value="0" class="w-16 bg-slate-700 border border-slate-600 text-white text-center rounded py-1 px-2 focus:outline-none focus:ring-1 focus:ring-seafoam">
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Results Column -->
                         <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 flex flex-col justify-between h-full">
                             <div>
                                 <h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Estimated Range Summary</h4>
@@ -404,269 +404,3 @@
                             <h4 class="font-semibold text-ocean-deep mb-2">Bank-Level Security</h4>
                             <p class="text-sm text-gray-600">Your data is protected with enterprise-grade encryption</p>
                         </div>
-                        <div class="text-center">
-                            <div class="flex justify-center mb-3">
-                                <i data-lucide="upload-cloud" class="w-10 h-10 text-ocean"></i>
-                            </div>
-                            <h4 class="font-semibold text-ocean-deep mb-2">Easy Document Sharing</h4>
-                            <p class="text-sm text-gray-600">Upload and access files securely anytime, anywhere</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="flex justify-center mb-3">
-                                <i data-lucide="message-circle" class="w-10 h-10 text-ocean"></i>
-                            </div>
-                            <h4 class="font-semibold text-ocean-deep mb-2">Direct Communication</h4>
-                            <p class="text-sm text-gray-600">Message your financial team directly within the portal</p>
-                        </div>
-                    </div>
-                    <a href="https://nybergfinancial.taxdome.com" 
-                       class="inline-block bg-seafoam hover:bg-seafoam/90 text-ocean-deep font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
-                        Access Client Portal
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="about" class="py-16 md:py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-ocean-deep mb-6">About Us</h2>
-            <div class="mb-8">
-                <p class="text-xl font-semibold text-ocean mb-2">Serving San Diego Since 1978</p>
-                <div class="w-24 h-1 bg-seafoam mx-auto rounded-full"></div>
-            </div>
-            <p class="text-lg text-gray-600 mb-6">
-                For over four decades, Nyberg Financial has been a trusted partner for individuals and businesses throughout the San Diego area. Led by Cameron Attisha, CPA, we believe in building lasting relationships with our clients through transparency, expertise, and personalized service. Our team of experienced professionals is dedicated to helping you navigate the complexities of tax preparation, accounting, and financial planning.
-            </p>
-            <p class="text-lg text-gray-600">
-                Whether you're an individual seeking tax assistance or a business looking for comprehensive financial solutions, we're here to simplify your financial journey and help you achieve your goals with confidence.
-            </p>
-        </div>
-    </section>
-    
-    <section id="contact" class="py-16 md:py-24 bg-sand-light">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-ocean-deep mb-4">Get In Touch</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    To ensure accurate work and uninterrupted focus on your files during high-volume tax periods, all consultations must be scheduled in advance.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-start">
-                
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="text-2xl font-semibold text-ocean-deep mb-2">Cameron Attisha, CPA</h3>
-                        <p class="text-gray-600 font-medium">Owner & Principal</p>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-seafoam/20 p-3 rounded-full">
-                                <i data-lucide="calendar" class="w-6 h-6 text-ocean"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h4 class="text-lg font-semibold text-ocean-deep">Consultations</h4>
-                                <p class="text-sm text-gray-600 mt-1 mb-3">By appointment only via Google Meet video conferencing. Select a convenient time slot below.</p>
-                                <a href="https://calendar.app.google/27Zk52rCAsiT2n618" target="_blank" class="inline-flex items-center text-sm font-semibold text-white bg-ocean hover:bg-ocean-deep px-4 py-2 rounded-lg transition-colors">
-                                    <span>Schedule a Consultation</span>
-                                    <i data-lucide="calendar" class="w-4 h-4 ml-1.5"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-seafoam/20 p-3 rounded-full">
-                                <i data-lucide="mail" class="w-6 h-6 text-ocean"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-ocean-deep">Email</h4>
-                                <a href="mailto:cameron@attishacpa.com" class="text-ocean hover:text-seafoam transition-colors mt-1 block font-medium">
-                                    cameron@attishacpa.com
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-seafoam/20 p-3 rounded-full">
-                                <i data-lucide="map-pin" class="w-6 h-6 text-ocean"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-ocean-deep">Mailing Address</h4>
-                                <p class="text-gray-600 mt-1">
-                                    10723 Prospect Ave<br>
-                                    Santee, CA 92071
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <form action="https://formspree.io/f/mnnevezq" method="POST" class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-                    <div class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                            <input type="text" name="name" id="name" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ocean focus:border-transparent transition duration-200 outline-none placeholder-gray-400"
-                                placeholder="John Doe">
-                        </div>
-
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                            <input type="email" name="email" id="email" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ocean focus:border-transparent transition duration-200 outline-none placeholder-gray-400"
-                                placeholder="john@example.com">
-                        </div>
-
-                        <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number (Optional)</label>
-                            <input type="tel" name="phone" id="phone"
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ocean focus:border-transparent transition duration-200 outline-none placeholder-gray-400"
-                                placeholder="(555) 123-4567">
-                        </div>
-
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">How can we help?</label>
-                            <textarea name="message" id="message" rows="4" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ocean focus:border-transparent transition duration-200 outline-none placeholder-gray-400"
-                                placeholder="Please describe your tax or accounting needs..."></textarea>
-                        </div>
-
-                        <button type="submit" 
-                            class="w-full bg-ocean hover:bg-ocean-deep text-white font-bold py-4 rounded-lg shadow-md hover:shadow-lg transform transition-all duration-200 flex justify-center items-center">
-                            <span>Send Message</span>
-                            <i data-lucide="send" class="w-5 h-5 ml-2"></i>
-                        </button>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-    </section>
-    
-    <footer class="bg-ocean-deep text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <p class="text-lg font-semibold mb-2">Nyberg Financial</p>
-                <p class="text-gray-300 mb-2">10723 Prospect Ave, Santee, CA 92071</p>
-                <p class="text-sm text-seafoam font-medium mb-4">Serving the community since 1978</p>
-                <p class="text-sm text-gray-400">
-                    &copy; 2026 Nyberg Financial Services, Inc. All rights reserved.
-                </p>
-            </div>
-        </div>
-    </footer>
-    
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-        
-        // Mobile menu toggle functionality
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Close mobile menu when clicking on a link
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-        
-        // Smooth scrolling logic
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && document.querySelector(href)) {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    const offsetTop = target.offsetTop - 64; // Account for fixed nav height
-                    
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Interactive Pricing Calculator Logic
-        const entitySelect = document.getElementById('est-entity');
-        const caRadioYes = document.querySelector('input[name="est-ca"][value="yes"]');
-        const caRadioNo = document.querySelector('input[name="est-ca"][value="no"]');
-        const booksRadioClean = document.querySelector('input[name="est-books"][value="clean"]');
-        const booksRadioMessy = document.querySelector('input[name="est-books"][value="messy"]');
-        const checkAssets = document.getElementById('est-assets');
-        const checkMultistate = document.getElementById('est-multistate');
-        const checkCrypto = document.getElementById('est-crypto');
-        const checkRentals = document.getElementById('est-rentals');
-
-        const finalRangeText = document.getElementById('est-final-range');
-        const summaryBaseText = document.getElementById('est-summary-base');
-        const caFeeRow = document.getElementById('est-ca-fee-row');
-        const cleanupRow = document.getElementById('est-cleanup-row');
-
-        function calculateEstimate() {
-            // Get base fee from selection
-            const selectedOption = entitySelect.options[entitySelect.selectedIndex];
-            const baseValue = parseInt(selectedOption.getAttribute('data-base'), 10);
-            
-            let finalBase = baseValue;
-            let complexityAddition = 0;
-
-            // Calculate state/California variables
-            const isCA = caRadioYes.checked;
-            if (isCA) {
-                caFeeRow.classList.remove('hidden');
-            } else {
-                caFeeRow.classList.add('hidden');
-            }
-
-            // Bookkeeping clean up warning trigger
-            const isMessy = booksRadioMessy.checked;
-            if (isMessy) {
-                cleanupRow.classList.remove('hidden');
-                cleanupRow.classList.add('flex');
-            } else {
-                cleanupRow.classList.add('hidden');
-                cleanupRow.classList.remove('flex');
-            }
-
-            // Check checkboxes
-            if (checkAssets.checked) complexityAddition += 200;
-            if (checkMultistate.checked) complexityAddition += 250;
-            if (checkCrypto.checked) complexityAddition += 200;
-            if (checkRentals.checked) complexityAddition += 150;
-
-            const totalBase = finalBase + complexityAddition;
-            
-            // Set range parameters (typically baseline to +25% buffer depending on audit risk/reconciliation overhead)
-            const rangeLow = totalBase;
-            const rangeHigh = Math.round(totalBase * 1.25);
-
-            // Update DOM Elements
-            summaryBaseText.textContent = `$${finalBase}`;
-            finalRangeText.textContent = `$${rangeLow.toLocaleString()} - $${rangeHigh.toLocaleString()}`;
-        }
-
-        // Attach event listeners to all fields
-        [entitySelect, caRadioYes, caRadioNo, booksRadioClean, booksRadioMessy, checkAssets, checkMultistate, checkCrypto, checkRentals].forEach(element => {
-            if (element) {
-                element.addEventListener('change', calculateEstimate);
-            }
-        });
-
-        // Run initial load calculations
-        calculateEstimate();
-    </script>
-</body>
-</html>
