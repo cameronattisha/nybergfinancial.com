@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyberg Financial - Simplified Tax & Accounting Solutions</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ocean-deep': '#0C4A6E',
+                        'ocean': '#0369A1',
+                        'ocean-light': '#0EA5E9',
+                        'sand': '#D4A574',
+                        'sand-light': '#F5E6D3',
+                        'coral': '#FF8B6A',
+                        'seafoam': '#4FD1C5',
+                        'sunset': '#F97316',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+   <style>
+    /* Custom CSS for La Jolla Hero Image */
+    .bg-la-jolla {
+        background-image: url('../la-jolla-backdrop.jpg'); /* Ensure this filename matches your uploaded image */
+        background-size: cover; 
+        background-position: center top; 
+        background-repeat: no-repeat;
+    }
+</style>
+</head>
+<body class="bg-gray-50">
+    
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold text-ocean-deep">Nyberg Financial</a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">Home</a>
+                    <a href="#services" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">Services</a>
+                    <a href="#pricing" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">Pricing</a>
+                    <a href="https://nybergfinancial.taxdome.com" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">Client Portal</a>
+                    <a href="#about" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">About Us</a>
+                    <a href="#contact" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">Contact</a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-ocean hover:text-seafoam focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="#home" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">Home</a>
+                <a href="#services" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">Services</a>
+                <a href="#pricing" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">Pricing</a>
+                <a href="https://nybergfinancial.taxdome.com" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">Client Portal</a>
+                <a href="#about" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">About Us</a>
+                <a href="#contact" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <section id="home" class="py-32 md:py-48 bg-la-jolla relative overflow-hidden">
+    <div class="absolute inset-0 bg-ocean-deep opacity-80"></div> 
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                Simplified Tax & Accounting for Your Future.
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-100 mb-10 max-w-3xl mx-auto">
+                Nyberg Financial provides secure, comprehensive solutions tailored to modern businesses and individuals.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-xl mx-auto mb-6">
+                <a href="https://nybergfinancial.taxdome.com" 
+                   class="w-full sm:w-auto inline-block bg-seafoam hover:bg-seafoam/90 text-ocean-deep font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-center">
+                    Access Client Portal
+                </a>
+                <a href="https://calendar.app.google/27Zk52rCAsiT2n618" target="_blank"
+                   class="w-full sm:w-auto inline-flex justify-center items-center bg-white/10 hover:bg-white/20 text-white border border-white/30 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-center">
+                    <span>Schedule a Call</span>
+                    <i data-lucide="calendar" class="w-5 h-5 ml-2"></i>
+                </a>
+            </div>
+            <p class="text-sm text-gray-300 italic max-w-2xl mx-auto">
+                Please note: In-office phone lines have been discontinued to protect production focus. Scheduled audio/video consultation is our exclusive voice channel.
+            </p>
+        </div>
+    </div>
+</section>
+    
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-ocean-deep mb-4">Our Services</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Comprehensive financial solutions designed to help you thrive
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-sand-light rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8">
+                    <div class="flex justify-center mb-6">
+                        <div class="bg-seafoam/20 p-4 rounded-full">
+                            <i data-lucide="file-text" class="w-12 h-12 text-ocean"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-ocean-deep mb-4 text-center">Tax Preparation & E-Filing</h3>
+                    <p class="text-gray-600 text-center">
+                        Expert tax preparation services with secure electronic filing. We maximize your deductions while ensuring full compliance with current tax regulations.
+                    </p>
+                </div>
+                
+                <div class="bg-sand-light rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8">
+                    <div class="flex justify-center mb-6">
+                        <div class="bg-seafoam/20 p-4 rounded-full">
+                            <i data-lucide="calculator" class="w-12 h-12 text-ocean"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-ocean-deep mb-4 text-center">Business Accounting & Bookkeeping</h3>
+                    <p class="text-gray-600 text-center">
+                        Professional bookkeeping and accounting services to keep your business finances organized, accurate, and ready for growth opportunities.
+                    </p>
+                </div>
+                
+                <div class="bg-sand-light rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8">
+                    <div class="flex justify-center mb-6">
+                        <div class="bg-seafoam/20 p-4 rounded-full">
+                            <i data-lucide="trending-up" class="w-12 h-12 text-ocean"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-ocean-deep mb-4 text-center">Financial Consulting & Planning</h3>
+                    <p class="text-gray-600 text-center">
+                        Strategic financial planning and consulting to help you achieve your long-term goals with confidence and clarity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="pricing" class="py-16 md:py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-ocean-deep mb-4">Transparent Baseline Pricing</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Fees are based on standard complexity parameters. Final custom quotes are systematically provided via our secure portal prior to document execution.
+                </p>
+                <p class="text-sm text-amber-600 bg-amber-50 inline-block px-4 py-1.5 rounded-full font-medium mt-4">
+                    ⚠️ Baseline fees assume clean, completely balanced, and reconciled digital files.
+                </p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-16">
+                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-200">
+                    <div>
+                        <h3 class="text-xl font-bold text-ocean-deep mb-2">Standard Individual</h3>
+                        <p class="text-sm text-gray-500 mb-4">Form 1040</p>
+                        <div class="mb-6">
+                            <span class="text-3xl font-extrabold text-ocean">$350</span>
+                            <span class="text-gray-400 text-sm"> / starting baseline</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-600 mb-6">
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Standard W-2 Income</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Standard Deductions</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Secure Electronic Filing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-sand-light/20 border-2 border-sand/40 rounded-2xl p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-200 relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-sand text-white px-3 py-0.5 rounded-full text-xs font-semibold tracking-wide shadow-sm">MOST POPULAR</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-ocean-deep mb-2">Investor & Specialized</h3>
+                        <p class="text-sm text-gray-500 mb-4">Form 1040 + Schedules</p>
+                        <div class="mb-6">
+                            <span class="text-3xl font-extrabold text-ocean">$750</span>
+                            <span class="text-gray-400 text-sm"> / starting baseline</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-600 mb-6">
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Itemized Deductions (Sched A)</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Self-Employed Tasks (Sched C)</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Rental Properties (Sched E)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-200">
+                    <div>
+                        <h3 class="text-xl font-bold text-ocean-deep mb-2">Partnerships & LLCs</h3>
+                        <p class="text-sm text-gray-500 mb-4">Form 1065 / CA Form 568</p>
+                        <div class="mb-6">
+                            <span class="text-3xl font-extrabold text-ocean">$1,500</span>
+                            <span class="text-gray-400 text-sm"> / starting baseline</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-600 mb-6">
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Multi-Member Business Entities</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Partner Schedule K-1 Generation</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>CA Franchise Tax Board Tracking</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-200">
+                    <div>
+                        <h3 class="text-xl font-bold text-ocean-deep mb-2">S-Corp & C-Corp</h3>
+                        <p class="text-sm text-gray-500 mb-4">Form 1120 / 1120-S</p>
+                        <div class="mb-6">
+                            <span class="text-3xl font-extrabold text-ocean">$1,800</span>
+                            <span class="text-gray-400 text-sm"> / starting baseline</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-600 mb-6">
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Corporate Tax Strategy Filings</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Shareholder Tracking & K-1s</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Reasonable Compensation Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE ESTIMATOR TOOL -->
+            <div class="max-w-4xl mx-auto bg-slate-900 text-white rounded-3xl shadow-2xl overflow-hidden border border-slate-800 mb-12">
+                <div class="p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 border-b border-slate-800 pb-6">
+                        <div>
+                            <span class="text-xs font-bold tracking-widest text-seafoam uppercase">Interactive Tool</span>
+                            <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-1">Estimate Your Custom Fee</h3>
+                        </div>
+                        <p class="text-sm text-slate-400 max-w-xs md:text-right">
+                            Adjust variables below to calculate your estimated base pricing bracket for the 2026 tax year.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 items-start">
+                        <!-- Inputs Column -->
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-300 mb-2">1. Select Return Type</label>
+                                <select id="est-entity" class="w-full bg-slate-800 border border-slate-700 text-white px-4 py-3 rounded-lg focus:ring-2 focus:ring-seafoam focus:border-transparent outline-none">
+                                    <option value="1040" data-base="350">Individual Return (Form 1040) — Base $350</option>
+                                    <option value="1040s" data-base="750">Investor & Specialized (1040 Schedules) — Base $750</option>
+                                    <option value="1065" data-base="1500">Partnership / LLC (Form 1065) — Base $1,500</option>
+                                    <option value="1120" data-base="1800">S-Corp / C-Corp (Form 1120/S) — Base $1,800</option>
+                                    <option value="1041" data-base="1200">Fiduciary Trust & Estate (Form 1041) — Base $1,200</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-300 mb-2">2. Are you filing a California return?</label>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <label class="flex items-center justify-between p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                        <span class="text-sm font-medium">Yes, in California</span>
+                                        <input type="radio" name="est-ca" value="yes" checked class="accent-seafoam w-4 h-4">
+                                    </label>
+                                    <label class="flex items-center justify-between p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                        <span class="text-sm font-medium">Out of State Only</span>
+                                        <input type="radio" name="est-ca" value="no" class="accent-seafoam w-4 h-4">
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-300 mb-2">3. Bookkeeping Reconciliation Quality</label>
+                                <div class="space-y-3">
+                                    <label class="flex items-start p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                        <input type="radio" name="est-books" value="clean" checked class="accent-seafoam w-4 h-4 mt-1 mr-3 shrink-0">
+                                        <div>
+                                            <p class="text-sm font-medium">Clean & Fully Reconciled</p>
+                                            <p class="text-xs text-slate-400">Books balance, retained earnings match prior year tax returns.</p>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-start p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                        <input type="radio" name="est-books" value="messy" class="accent-seafoam w-4 h-4 mt-1 mr-3 shrink-0">
+                                        <div>
+                                            <p class="text-sm font-medium text-amber-400">Needs Cleanup / Reconciliation</p>
+                                            <p class="text-xs text-slate-400">Unreconciled bank/credit accounts, unbalanced balance sheet, or unsure.</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-300 mb-2">4. Add-on Complexity Metrics</label>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <label class="flex items-center p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                        <input type="checkbox" id="est-assets" class="accent-seafoam w-4 h-4 mr-3 shrink-0">
+                                        <span class="text-xs font-medium text-slate-300">New Assets / Depr. Tracker (+$200)</span>
+                                    </label>
+                                    <label class="flex items-center p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                        <input type="checkbox" id="est-multistate" class="accent-seafoam w-4 h-4 mr-3 shrink-0">
+                                        <span class="text-xs font-medium text-slate-300">Multi-State Returns (+$250)</span>
+                                    </label>
+                                    <label class="flex items-center p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                        <input type="checkbox" id="est-crypto" class="accent-seafoam w-4 h-4 mr-3 shrink-0">
+                                        <span class="text-xs font-medium text-slate-300">Crypto/Active Trading (+$200)</span>
+                                    </label>
+                                    <label class="flex items-center p-3 rounded-lg border border-slate-700 bg-slate-800 cursor-pointer hover:border-slate-600 transition-all">
+                                        <input type="checkbox" id="est-rentals" class="accent-seafoam w-4 h-4 mr-3 shrink-0">
+                                        <span class="text-xs font-medium text-slate-300">Rental Property Schedule (+$150)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Results Column -->
+                        <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 flex flex-col justify-between h-full">
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Estimated Range Summary</h4>
+                                
+                                <div class="mb-6">
+                                    <span class="text-xs text-slate-400 block">Calculated Bracket</span>
+                                    <div class="flex items-baseline gap-2">
+                                        <span id="est-final-range" class="text-4xl md:text-5xl font-extrabold text-seafoam">$350 - $450</span>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-4 border-t border-slate-700 pt-4 mb-6">
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-slate-400">Baseline Prep Fee:</span>
+                                        <span id="est-summary-base" class="font-semibold text-white">$350</span>
+                                    </div>
+                                    <div id="est-ca-fee-row" class="flex justify-between text-sm">
+                                        <span class="text-slate-400">California Regulatory Compliance:</span>
+                                        <span class="font-semibold text-seafoam">Included</span>
+                                    </div>
+                                    <div id="est-cleanup-row" class="hidden flex-col bg-amber-950/30 border border-amber-900/50 rounded-lg p-3 text-xs text-amber-300 space-y-1">
+                                        <p class="font-bold flex items-center">
+                                            <i data-lucide="alert-triangle" class="w-3.5 h-3.5 mr-1.5 shrink-0"></i>
+                                            Accounting Cleanup Required
+                                        </p>
+                                        <p>Because books are unreconciled, custom trial balance construction is required. This will be billed as a separate project at a standard rate of <strong>$150/hr</strong>.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="https://nybergfinancial.taxdome.com" 
+                                   class="block text-center bg-seafoam hover:bg-seafoam/90 text-ocean-deep font-bold py-4 px-6 rounded-xl transition-all shadow-lg hover:shadow-seafoam/20">
+                                    Upload Documents & Lock Quote
+                                </a>
+                                <p class="text-[10px] text-slate-400 mt-4 text-center italic">
+                                    Disclaimer: Estimates are intended for budgeting purposes. Official quotes are programmatically rendered following a technical review of prior year filings and structural business books.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-gray-50 rounded-xl p-4 text-center border border-gray-200 text-sm text-gray-600 max-w-2xl mx-auto">
+                💼 <strong>Fiduciary Trust & Estate Tax Returns (Form 1041):</strong> Scoped individually due to specific asset parameters. Rates begin at a baseline of <strong>$1,200</strong>.
+            </div>
+        </div>
+    </section>
+    
+    <section id="portal" class="py-16 md:py-24 bg-gradient-to-br from-sand-light to-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-sand/20">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-ocean-deep mb-6">
+                        Seamless, Secure Client Experience.
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+                        All secure communication, document uploads, and task management is handled through our integrated, professional portal, powered by TaxDome.
+                    </p>
+                    <div class="bg-seafoam/10 border-l-4 border-seafoam rounded-lg p-6 mb-8">
+                        <p class="text-gray-700">
+                            <strong>Portal Access:</strong> Our secure client portal is hosted at 
+                            <a href="https://nybergfinancial.taxdome.com" class="text-ocean hover:underline font-semibold">
+                                nybergfinancial.taxdome.com
+                            </a>
+                            where you can access your TaxDome account.
+                        </p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="flex justify-center mb-3">
+                                <i data-lucide="shield-check" class="w-10 h-10 text-ocean"></i>
+                            </div>
+                            <h4 class="font-semibold text-ocean-deep mb-2">Bank-Level Security</h4>
+                            <p class="text-sm text-gray-600">Your data is protected with enterprise-grade encryption</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="flex justify-center mb-3">
+                                <i data-lucide="upload-cloud" class="w-10 h-10 text-ocean"></i>
+                            </div>
+                            <h4 class="font-semibold text-ocean-deep mb-2">Easy Document Sharing</h4>
+                            <p class="text-sm text-gray-600">Upload and access files securely anytime, anywhere</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="flex justify-center mb-3">
+                                <i data-lucide="message-circle" class="w-10 h-10 text-ocean"></i>
+                            </div>
+                            <h4 class="font-semibold text-ocean-deep mb-2">Direct Communication</h4>
+                            <p class="text-sm text-gray-600">Message your financial team directly within the portal</p>
+                        </div>
+                    </div>
+                    <a href="https://nybergfinancial.taxdome.com" 
+                       class="inline-block bg-seafoam hover:bg-seafoam/90 text-ocean-deep font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
+                        Access Client Portal
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-ocean-deep mb-6">About Us</h2>
+            <div class="mb-8">
+                <p class="text-xl font-semibold text-ocean mb-2">Serving San Diego Since 1978</p>
+                <div class="w-24 h-1 bg-seafoam mx-auto rounded-full"></div>
+            </div>
+            <p class="text-lg text-gray-600 mb-6">
+                For over four decades, Nyberg Financial has been a trusted partner for individuals and businesses throughout the San Diego area. Led by Cameron Attisha, CPA, we believe in building lasting relationships with our clients through transparency, expertise, and personalized service. Our team of experienced professionals is dedicated to helping you navigate the complexities of tax preparation, accounting, and financial planning.
+            </p>
+            <p class="text-lg text-gray-600">
+                Whether you're an individual seeking tax assistance or a business looking for comprehensive financial solutions, we're here to simplify your financial journey and help you achieve your goals with confidence.
+            </p>
+        </div>
+    </section>
+    
+    <section id="contact" class="py-16 md:py-24 bg-sand-light">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-ocean-deep mb-4">Get In Touch</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    To ensure accurate work and uninterrupted focus on your files during high-volume tax periods, all consultations must be scheduled in advance.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-ocean-deep mb-2">Cameron Attisha, CPA</h3>
+                        <p class="text-gray-600 font-medium">Owner & Principal</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-seafoam/20 p-3 rounded-full">
+                                <i data-lucide="calendar" class="w-6 h-6 text-ocean"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-lg font-semibold text-ocean-deep">Consultations</h4>
+                                <p class="text-sm text-gray-600 mt-1 mb-3">By appointment only via Google Meet video conferencing. Select a convenient time slot below.</p>
+                                <a href="https://calendar.app.google/27Zk52rCAsiT2n618" target="_blank" class="inline-flex items-center text-sm font-semibold text-white bg-ocean hover:bg-ocean-deep px-4 py-2 rounded-lg transition-colors">
+                                    <span>Schedule a Consultation</span>
+                                    <i data-lucide="calendar" class="w-4 h-4 ml-1.5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-seafoam/20 p-3 rounded-full">
+                                <i data-lucide="mail" class="w-6 h-6 text-ocean"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-ocean-deep">Email</h4>
+                                <a href="mailto:cameron@attishacpa.com" class="text-ocean hover:text-seafoam transition-colors mt-1 block font-medium">
+                                    cameron@attishacpa.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-seafoam/20 p-3 rounded-full">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-ocean"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-ocean-deep">Mailing Address</h4>
+                                <p class="text-gray-600 mt-1">
+                                    10723 Prospect Ave<br>
+                                    Santee, CA 92071
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="https://formspree.io/f/mnnevezq" method="POST" class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                    <div class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" name="name" id="name" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ocean focus:border-transparent transition duration-200 outline-none placeholder-gray-400"
+                                placeholder="John Doe">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" name="email" id="email" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ocean focus:border-transparent transition duration-200 outline-none placeholder-gray-400"
+                                placeholder="john@example.com">
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number (Optional)</label>
+                            <input type="tel" name="phone" id="phone"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ocean focus:border-transparent transition duration-200 outline-none placeholder-gray-400"
+                                placeholder="(555) 123-4567">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">How can we help?</label>
+                            <textarea name="message" id="message" rows="4" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ocean focus:border-transparent transition duration-200 outline-none placeholder-gray-400"
+                                placeholder="Please describe your tax or accounting needs..."></textarea>
+                        </div>
+
+                        <button type="submit" 
+                            class="w-full bg-ocean hover:bg-ocean-deep text-white font-bold py-4 rounded-lg shadow-md hover:shadow-lg transform transition-all duration-200 flex justify-center items-center">
+                            <span>Send Message</span>
+                            <i data-lucide="send" class="w-5 h-5 ml-2"></i>
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-ocean-deep text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-lg font-semibold mb-2">Nyberg Financial</p>
+                <p class="text-gray-300 mb-2">10723 Prospect Ave, Santee, CA 92071</p>
+                <p class="text-sm text-seafoam font-medium mb-4">Serving the community since 1978</p>
+                <p class="text-sm text-gray-400">
+                    &copy; 2026 Nyberg Financial Services, Inc. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling logic
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    const offsetTop = target.offsetTop - 64; // Account for fixed nav height
+                    
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Interactive Pricing Calculator Logic
+        const entitySelect = document.getElementById('est-entity');
+        const caRadioYes = document.querySelector('input[name="est-ca"][value="yes"]');
+        const caRadioNo = document.querySelector('input[name="est-ca"][value="no"]');
+        const booksRadioClean = document.querySelector('input[name="est-books"][value="clean"]');
+        const booksRadioMessy = document.querySelector('input[name="est-books"][value="messy"]');
+        const checkAssets = document.getElementById('est-assets');
+        const checkMultistate = document.getElementById('est-multistate');
+        const checkCrypto = document.getElementById('est-crypto');
+        const checkRentals = document.getElementById('est-rentals');
+
+        const finalRangeText = document.getElementById('est-final-range');
+        const summaryBaseText = document.getElementById('est-summary-base');
+        const caFeeRow = document.getElementById('est-ca-fee-row');
+        const cleanupRow = document.getElementById('est-cleanup-row');
+
+        function calculateEstimate() {
+            // Get base fee from selection
+            const selectedOption = entitySelect.options[entitySelect.selectedIndex];
+            const baseValue = parseInt(selectedOption.getAttribute('data-base'), 10);
+            
+            let finalBase = baseValue;
+            let complexityAddition = 0;
+
+            // Calculate state/California variables
+            const isCA = caRadioYes.checked;
+            if (isCA) {
+                caFeeRow.classList.remove('hidden');
+            } else {
+                caFeeRow.classList.add('hidden');
+            }
+
+            // Bookkeeping clean up warning trigger
+            const isMessy = booksRadioMessy.checked;
+            if (isMessy) {
+                cleanupRow.classList.remove('hidden');
+                cleanupRow.classList.add('flex');
+            } else {
+                cleanupRow.classList.add('hidden');
+                cleanupRow.classList.remove('flex');
+            }
+
+            // Check checkboxes
+            if (checkAssets.checked) complexityAddition += 200;
+            if (checkMultistate.checked) complexityAddition += 250;
+            if (checkCrypto.checked) complexityAddition += 200;
+            if (checkRentals.checked) complexityAddition += 150;
+
+            const totalBase = finalBase + complexityAddition;
+            
+            // Set range parameters (typically baseline to +25% buffer depending on audit risk/reconciliation overhead)
+            const rangeLow = totalBase;
+            const rangeHigh = Math.round(totalBase * 1.25);
+
+            // Update DOM Elements
+            summaryBaseText.textContent = `$${finalBase}`;
+            finalRangeText.textContent = `$${rangeLow.toLocaleString()} - $${rangeHigh.toLocaleString()}`;
+        }
+
+        // Attach event listeners to all fields
+        [entitySelect, caRadioYes, caRadioNo, booksRadioClean, booksRadioMessy, checkAssets, checkMultistate, checkCrypto, checkRentals].forEach(element => {
+            if (element) {
+                element.addEventListener('change', calculateEstimate);
+            }
+        });
+
+        // Run initial load calculations
+        calculateEstimate();
+      // Auto-scroll to pricing on direct page load
+window.addEventListener('DOMContentLoaded', () => {
+    const target = document.querySelector('#pricing');
+    if (target) {
+        setTimeout(() => {
+            const offsetTop = target.offsetTop - 80;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }, 150);
+    }
+});
+    </script>
+</body>
+</html>
