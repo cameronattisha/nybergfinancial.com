@@ -651,7 +651,7 @@
             
             // Set range parameters (typically baseline to +25% buffer depending on audit risk/reconciliation overhead)
             const rangeLow = totalBase;
-            const rangeHigh = Math.round(totalBase * 1.25);
+            const rangeHigh = Math.round((totalBase * 1.25) / 10) * 10;
 
             // Update DOM Elements
             summaryBaseText.textContent = `$${finalBase}`;
