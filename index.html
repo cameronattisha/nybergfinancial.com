@@ -9,7 +9,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=MS+Sans+Serif&family=Tahoma:wght@400;700&display=swap" rel="stylesheet">
     
     <script src="https://unpkg.com/lucide@latest"></script>
     
@@ -18,429 +18,533 @@
             theme: {
                 extend: {
                     colors: {
+                        'xp-blue': '#0058e6',
+                        'xp-title': '#0053e1',
+                        'xp-title-dark': '#003197',
+                        'xp-bg': '#ece9d8',
+                        'xp-silver': '#d4d0c8',
+                        'xp-border-light': '#ffffff',
+                        'xp-border-dark': '#808080',
                         'ocean-deep': '#0C4A6E',
                         'ocean': '#0369A1',
-                        'ocean-light': '#0EA5E9',
-                        'sand': '#D4A574',
-                        'sand-light': '#F5E6D3',
-                        'coral': '#FF8B6A',
                         'seafoam': '#4FD1C5',
-                        'sunset': '#F97316',
                     },
                     fontFamily: {
-                        'sans': ['Inter', 'sans-serif'],
+                        'pixel': ['"VT323"', 'monospace'],
+                        'y2k': ['Tahoma', 'Arial', 'sans-serif'],
                     },
                 }
             }
         }
     </script>
     
-   <style>
-    /* Custom CSS for La Jolla Hero Image */
-    .bg-la-jolla {
-        background-image: url('la-jolla-backdrop.jpg'); /* Ensure this filename matches your uploaded image */
-        background-size: cover; 
-        background-position: center top; 
-        background-repeat: no-repeat;
-    }
-</style>
+    <style>
+        body {
+            background-color: #5a7edc;
+            background-image: radial-gradient(circle at 50% 50%, #7195f5 0%, #3a62d0 100%);
+            font-family: Tahoma, Arial, sans-serif;
+        }
+
+        /* Y2K Bevel Borders & Windows XP Style Utility Classes */
+        .y2k-window {
+            background-color: #ece9d8;
+            border: 3px solid #0053e1;
+            border-radius: 8px 8px 0 0;
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .y2k-title-bar {
+            background: linear-gradient(180deg, #0058e6 0%, #3a93ff 8%, #0053e1 40%, #003197 100%);
+            color: white;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 5px 5px 0 0;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+        }
+
+        .y2k-button {
+            background: linear-gradient(180deg, #ffffff 0%, #ece9d8 45%, #d8d0c5 50%, #f0ece0 100%);
+            border-top: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
+            border-right: 2px solid #706e6b;
+            border-bottom: 2px solid #706e6b;
+            box-shadow: inset -1px -1px 0px #000000;
+            color: #000000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .y2k-button:active {
+            border-top: 2px solid #706e6b;
+            border-left: 2px solid #706e6b;
+            border-right: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            box-shadow: inset 1px 1px 0px #000000;
+            padding-top: 2px;
+        }
+
+        .y2k-btn-primary {
+            background: linear-gradient(180deg, #32cd32 0%, #228b22 50%, #006400 100%);
+            border-top: 2px solid #90ee90;
+            border-left: 2px solid #90ee90;
+            border-right: 2px solid #003300;
+            border-bottom: 2px solid #003300;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px #000000;
+        }
+
+        .y2k-input {
+            background-color: #ffffff;
+            border-top: 2px solid #7f9db9;
+            border-left: 2px solid #7f9db9;
+            border-right: 1px solid #d6d3ce;
+            border-bottom: 1px solid #d6d3ce;
+            box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .bg-la-jolla {
+            background-image: url('la-jolla-backdrop.jpg');
+            background-size: cover; 
+            background-position: center top; 
+            background-repeat: no-repeat;
+        }
+
+        .glossy-badge {
+            background: linear-gradient(180deg, #ff8c00 0%, #ff4500 100%);
+            border: 1px solid #ffe4b5;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+    </style>
 </head>
-<body class="bg-gray-50">
-    
-    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <a href="#home" class="text-2xl font-bold text-ocean-deep">Nyberg Financial</a>
+<body class="text-gray-900 pb-12">
+
+    <!-- Top Windows Taskbar Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#245edb] border-b-2 border-[#123075] shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-12">
+                
+                <!-- "Start" style logo -->
+                <div class="flex items-center space-x-2">
+                    <a href="#home" class="flex items-center space-x-2 y2k-button px-3 py-1 text-sm bg-gradient-to-r from-green-500 to-green-700 text-white rounded-r-md border-2 border-green-300 font-bold tracking-wide">
+                        <span class="text-yellow-300 text-lg font-black">❖</span>
+                        <span class="text-white text-base">Nyberg Financial</span>
+                    </a>
                 </div>
                 
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">Home</a>
-                    <a href="#services" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">Services</a>
-                    <a href="#pricing" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">Pricing</a>
-                    <a href="https://nybergfinancial.taxdome.com" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">Client Portal</a>
-                    <a href="#about" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">About Us</a>
-                    <a href="#contact" class="text-ocean hover:text-seafoam transition-colors duration-200 font-medium">Contact</a>
+                <!-- Nav Links styled like browser tabs -->
+                <div class="hidden md:flex space-x-1">
+                    <a href="#home" class="y2k-button px-3 py-1 text-xs text-black font-semibold hover:bg-yellow-100">Home</a>
+                    <a href="#services" class="y2k-button px-3 py-1 text-xs text-black font-semibold hover:bg-yellow-100">Services</a>
+                    <a href="#pricing" class="y2k-button px-3 py-1 text-xs text-black font-semibold hover:bg-yellow-100">Pricing</a>
+                    <a href="https://nybergfinancial.taxdome.com" class="y2k-button px-3 py-1 text-xs text-black font-semibold hover:bg-yellow-100 bg-yellow-200">Client Portal ⚡</a>
+                    <a href="#about" class="y2k-button px-3 py-1 text-xs text-black font-semibold hover:bg-yellow-100">About Us</a>
+                    <a href="#contact" class="y2k-button px-3 py-1 text-xs text-black font-semibold hover:bg-yellow-100">Contact</a>
                 </div>
                 
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-ocean hover:text-seafoam focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
+                    <button id="mobile-menu-button" class="y2k-button px-2 py-1 text-xs font-bold">
+                        MENU ☰
                     </button>
                 </div>
             </div>
         </div>
         
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-            <div class="px-4 pt-2 pb-4 space-y-2">
-                <a href="#home" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">Home</a>
-                <a href="#services" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">Services</a>
-                <a href="#pricing" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">Pricing</a>
-                <a href="https://nybergfinancial.taxdome.com" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">Client Portal</a>
-                <a href="#about" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">About Us</a>
-                <a href="#contact" class="block px-3 py-2 rounded-lg text-ocean hover:bg-sand-light hover:text-ocean-deep transition-colors duration-200 font-medium">Contact</a>
-            </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#ece9d8] border-b-2 border-[#0053e1] p-3 space-y-2">
+            <a href="#home" class="block y2k-button px-3 py-2 text-center text-sm">Home</a>
+            <a href="#services" class="block y2k-button px-3 py-2 text-center text-sm">Services</a>
+            <a href="#pricing" class="block y2k-button px-3 py-2 text-center text-sm">Pricing</a>
+            <a href="https://nybergfinancial.taxdome.com" class="block y2k-button px-3 py-2 text-center text-sm bg-yellow-200">Client Portal</a>
+            <a href="#about" class="block y2k-button px-3 py-2 text-center text-sm">About Us</a>
+            <a href="#contact" class="block y2k-button px-3 py-2 text-center text-sm">Contact</a>
         </div>
     </nav>
-    
-    <section id="home" class="py-32 md:py-48 bg-la-jolla relative overflow-hidden">
-    <div class="absolute inset-0 bg-ocean-deep opacity-80"></div> 
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Simplified Tax Preparation & Strategy.
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-100 mb-10 max-w-3xl mx-auto">
-                Nyberg Financial provides secure, technology-driven tax solutions tailored to modern businesses, investors, and individuals.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-xl mx-auto mb-6">
-                <a href="https://nybergfinancial.taxdome.com" 
-                   class="w-full sm:w-auto inline-block bg-seafoam hover:bg-seafoam/90 text-ocean-deep font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-center">
-                    Access Client Portal
-                </a>
-                <a href="https://calendar.app.google/27Zk52rCAsiT2n618" target="_blank"
-                   class="w-full sm:w-auto inline-flex justify-center items-center bg-white/10 hover:bg-white/20 text-white border border-white/30 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-center">
-                    <span>Schedule a Call</span>
-                    <i data-lucide="calendar" class="w-5 h-5 ml-2"></i>
-                </a>
-            </div>
-            <p class="text-sm text-gray-300 italic max-w-2xl mx-auto">
-                Please note: In-office phone lines have been discontinued to protect production focus. Scheduled audio/video consultation is our exclusive voice channel.
-            </p>
+
+    <!-- Retro Marquee Announcement Ticker -->
+    <div class="mt-14 max-w-7xl mx-auto px-4">
+        <div class="bg-black text-green-400 font-pixel text-lg py-1 px-3 border-2 border-gray-400 rounded flex items-center shadow-inner">
+            <span class="text-yellow-400 font-bold mr-2 whitespace-nowrap">[SYSTEM UPDATE]:</span>
+            <marquee behavior="scroll" direction="left" class="w-full">
+                Welcome to Nyberg Financial • Serving San Diego Since 1978 • Secure Technology-Driven Tax Preparation & Strategy • Click 'Client Portal' to Upload Documents •
+            </marquee>
         </div>
     </div>
-</section>
-    
-    <section id="services" class="py-16 md:py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-ocean-deep mb-4">Our Services</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Modern, secure tax preparation and planning solutions designed for efficiency.
-                </p>
+
+    <!-- Main Content Container Wrapper -->
+    <main class="max-w-7xl mx-auto px-4 mt-6 space-y-10">
+
+        <!-- Hero Section inside classic XP Window -->
+        <section id="home" class="y2k-window overflow-hidden">
+            <div class="y2k-title-bar flex justify-between items-center">
+                <span class="flex items-center space-x-2 text-sm">
+                    <span>💾</span>
+                    <span>Nyberg_Financial_Main_Desktop.exe</span>
+                </span>
+                <div class="flex space-x-1">
+                    <button class="y2k-button px-2 py-0 text-xs font-black">_</button>
+                    <button class="y2k-button px-2 py-0 text-xs font-black">❐</button>
+                    <button class="y2k-button px-2 py-0 text-xs font-black bg-red-400 text-white">X</button>
+                </div>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-sand-light rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8">
-                    <div class="flex justify-center mb-6">
-                        <div class="bg-seafoam/20 p-4 rounded-full">
-                            <i data-lucide="file-text" class="w-12 h-12 text-ocean"></i>
-                        </div>
+
+            <div class="bg-la-jolla relative p-8 md:p-16 text-center border-b-2 border-gray-400">
+                <div class="absolute inset-0 bg-blue-900/80"></div> 
+
+                <div class="relative z-10 max-w-3xl mx-auto">
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]">
+                        Simplified Tax Preparation & Strategy.
+                    </h1>
+                    
+                    <div class="bg-[#ece9d8] border-2 border-white p-4 rounded-md shadow-lg mb-8 text-gray-800 text-base md:text-lg font-medium">
+                        Nyberg Financial provides secure, technology-driven tax solutions tailored to modern businesses, investors, and individuals.
                     </div>
-                    <h3 class="text-2xl font-semibold text-ocean-deep mb-4 text-center">Individual Tax Preparation</h3>
-                    <p class="text-gray-600 text-center">
-                        Expert 1040 preparation for individuals, families, and real estate investors. Secure digital document uploads and electronic filing designed for speed and accuracy.
+
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6">
+                        <a href="https://nybergfinancial.taxdome.com" 
+                           class="w-full sm:w-auto y2k-button y2k-btn-primary text-lg px-8 py-3 rounded text-center">
+                           🚀 Access Client Portal
+                        </a>
+                        <a href="https://calendar.app.google/27Zk52rCAsiT2n618" target="_blank"
+                           class="w-full sm:w-auto y2k-button text-lg px-8 py-3 rounded text-center flex items-center justify-center space-x-2">
+                            <span>📅 Schedule a Call</span>
+                        </a>
+                    </div>
+
+                    <div class="bg-yellow-100 border border-yellow-400 text-yellow-900 p-3 rounded text-xs md:text-sm font-semibold shadow">
+                        ⚠️ <strong>Please note:</strong> In-office phone lines have been discontinued to protect production focus. Scheduled audio/video consultation is our exclusive voice channel.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="y2k-window">
+            <div class="y2k-title-bar">
+                <span>📁 C:\Nyberg_Financial\Our_Services</span>
+            </div>
+            <div class="p-6 md:p-8 bg-[#ece9d8]">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-2">Our Services</h2>
+                    <p class="text-sm md:text-base text-gray-700">
+                        Modern, secure tax preparation and planning solutions designed for efficiency.
                     </p>
                 </div>
-                
-                <div class="bg-sand-light rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8">
-                    <div class="flex justify-center mb-6">
-                        <div class="bg-seafoam/20 p-4 rounded-full">
-                            <i data-lucide="building-2" class="w-12 h-12 text-ocean"></i>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white border-2 border-gray-400 p-6 rounded shadow-inner flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full border border-blue-400">
+                                    <i data-lucide="file-text" class="w-10 h-10 text-blue-700"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-900 text-center mb-3">Individual Tax Preparation</h3>
+                            <p class="text-sm text-gray-700 text-center">
+                                Expert 1040 preparation for individuals, families, and real estate investors. Secure digital document uploads and electronic filing designed for speed and accuracy.
+                            </p>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-semibold text-ocean-deep mb-4 text-center">Business Tax Preparation</h3>
-                    <p class="text-gray-600 text-center">
-                        Comprehensive year-end tax returns for S-Corporations (1120-S), Partnerships (1065), and Sole Proprietors. Streamlined filings from clean digital ledgers.
+
+                    <!-- Service Card 2 -->
+                    <div class="bg-white border-2 border-gray-400 p-6 rounded shadow-inner flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full border border-blue-400">
+                                    <i data-lucide="building-2" class="w-10 h-10 text-blue-700"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-900 text-center mb-3">Business Tax Preparation</h3>
+                            <p class="text-sm text-gray-700 text-center">
+                                Comprehensive year-end tax returns for S-Corporations (1120-S), Partnerships (1065), and Sole Proprietors. Streamlined filings from clean digital ledgers.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="bg-white border-2 border-gray-400 p-6 rounded shadow-inner flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full border border-blue-400">
+                                    <i data-lucide="trending-up" class="w-10 h-10 text-blue-700"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-900 text-center mb-3">Tax Strategy & Planning</h3>
+                            <p class="text-sm text-gray-700 text-center">
+                                Practical tax planning guidance including S-Corp election analysis, quarterly estimated tax calculations, and year-end deduction optimization.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="y2k-window">
+            <div class="y2k-title-bar">
+                <span>💰 Baseline_Pricing_Grid.exe</span>
+            </div>
+            <div class="p-6 md:p-8 bg-[#ece9d8]">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-2">Transparent Baseline Pricing</h2>
+                    <p class="text-sm md:text-base text-gray-700 max-w-2xl mx-auto mb-3">
+                        Fees are based on standard complexity parameters. Final custom quotes are systematically provided via our secure portal prior to document execution.
                     </p>
-                </div>
-                
-                <div class="bg-sand-light rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8">
-                    <div class="flex justify-center mb-6">
-                        <div class="bg-seafoam/20 p-4 rounded-full">
-                            <i data-lucide="trending-up" class="w-12 h-12 text-ocean"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-ocean-deep mb-4 text-center">Tax Strategy & Planning</h3>
-                    <p class="text-gray-600 text-center">
-                        Practical tax planning guidance including S-Corp election analysis, quarterly estimated tax calculations, and year-end deduction optimization.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="pricing" class="py-16 md:py-24 bg-white border-t border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-ocean-deep mb-4">Transparent Baseline Pricing</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Fees are based on standard complexity parameters. Final custom quotes are systematically provided via our secure portal prior to document execution.
-                </p>
-                <p class="text-sm text-amber-600 bg-amber-50 inline-block px-4 py-1.5 rounded-full font-medium mt-4">
-                    ⚠️ Baseline fees assume clean, completely balanced, and reconciled digital files.
-                </p>
-            </div>
-            
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-8">
-                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-200">
-                    <div>
-                        <h3 class="text-xl font-bold text-ocean-deep mb-2">Standard Individual</h3>
-                        <p class="text-sm text-gray-500 mb-4">Form 1040</p>
-                        <div class="mb-6">
-                            <span class="text-3xl font-extrabold text-ocean">$350</span>
-                            <span class="text-gray-400 text-sm"> / starting baseline</span>
-                        </div>
-                        <ul class="space-y-3 text-sm text-gray-600 mb-6">
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Standard W-2 Income</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Standard Deductions</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Secure Electronic Filing</li>
-                        </ul>
+                    <div class="inline-block bg-yellow-200 border-2 border-yellow-500 text-yellow-900 text-xs md:text-sm font-bold px-4 py-1 rounded">
+                        ⚠️ Baseline fees assume clean, completely balanced, and reconciled digital files.
                     </div>
                 </div>
 
-                <div class="bg-sand-light/20 border-2 border-sand/40 rounded-2xl p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-200 relative">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-sand text-white px-3 py-0.5 rounded-full text-xs font-semibold tracking-wide shadow-sm">MOST POPULAR</div>
-                    <div>
-                        <h3 class="text-xl font-bold text-ocean-deep mb-2">Investor & Specialized</h3>
-                        <p class="text-sm text-gray-500 mb-4">Form 1040 + Schedules</p>
-                        <div class="mb-4">
-                            <span class="text-3xl font-extrabold text-ocean">$750</span>
-                            <span class="text-gray-400 text-sm"> / starting baseline</span>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                    <!-- Standard -->
+                    <div class="bg-white border-2 border-gray-400 p-5 rounded flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-blue-900 mb-1">Standard Individual</h3>
+                            <p class="text-xs text-gray-500 mb-3">Form 1040</p>
+                            <div class="mb-4">
+                                <span class="text-3xl font-black text-green-700">$350</span>
+                                <span class="text-xs text-gray-500"> / starting</span>
+                            </div>
+                            <ul class="space-y-2 text-xs text-gray-700">
+                                <li class="flex items-center">✓ Standard W-2 Income</li>
+                                <li class="flex items-center">✓ Standard Deductions</li>
+                                <li class="flex items-center">✓ Secure Electronic Filing</li>
+                            </ul>
                         </div>
-                        <div class="mb-4 bg-amber-50 border border-amber-200 text-amber-800 text-xs rounded-lg p-3">
-                            <strong>Note on Complexity:</strong> Baseline fee may scale upward if your return demands numerous unique state or schedule declarations.
+                    </div>
+
+                    <!-- Most Popular -->
+                    <div class="bg-yellow-50 border-4 border-orange-400 p-5 rounded flex flex-col justify-between relative shadow-md">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 glossy-badge text-white px-3 py-0.5 rounded-full text-xs font-bold">
+                            ★ MOST POPULAR ★
                         </div>
-                        <ul class="space-y-3 text-sm text-gray-600 mb-6">
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Itemized Deductions (Sched A)</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Self-Employed Tasks (Sched C)</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Rental Properties (Sched E)</li>
-                        </ul>
+                        <div class="mt-2">
+                            <h3 class="text-lg font-bold text-blue-900 mb-1">Investor & Specialized</h3>
+                            <p class="text-xs text-gray-500 mb-3">Form 1040 + Schedules</p>
+                            <div class="mb-3">
+                                <span class="text-3xl font-black text-green-700">$750</span>
+                                <span class="text-xs text-gray-500"> / starting</span>
+                            </div>
+                            <div class="mb-3 bg-orange-100 border border-orange-300 text-orange-900 text-[10px] p-2 rounded">
+                                <strong>Note on Complexity:</strong> Baseline fee may scale upward if your return demands numerous unique state or schedule declarations.
+                            </div>
+                            <ul class="space-y-2 text-xs text-gray-700">
+                                <li class="flex items-center">✓ Itemized Deductions (Sched A)</li>
+                                <li class="flex items-center">✓ Self-Employed Tasks (Sched C)</li>
+                                <li class="flex items-center">✓ Rental Properties (Sched E)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Partnerships -->
+                    <div class="bg-white border-2 border-gray-400 p-5 rounded flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-blue-900 mb-1">Partnerships & LLCs</h3>
+                            <p class="text-xs text-gray-500 mb-3">Form 1065 / CA Form 568</p>
+                            <div class="mb-4">
+                                <span class="text-3xl font-black text-green-700">$1,500</span>
+                                <span class="text-xs text-gray-500"> / starting</span>
+                            </div>
+                            <ul class="space-y-2 text-xs text-gray-700">
+                                <li class="flex items-center">✓ Multi-Member Business Entities</li>
+                                <li class="flex items-center">✓ Partner Schedule K-1 Generation</li>
+                                <li class="flex items-center">✓ CA Franchise Tax Board Tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- S-Corp -->
+                    <div class="bg-white border-2 border-gray-400 p-5 rounded flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-blue-900 mb-1">S-Corp & C-Corp</h3>
+                            <p class="text-xs text-gray-500 mb-3">Form 1120 / 1120-S</p>
+                            <div class="mb-4">
+                                <span class="text-3xl font-black text-green-700">$1,800</span>
+                                <span class="text-xs text-gray-500"> / starting</span>
+                            </div>
+                            <ul class="space-y-2 text-xs text-gray-700">
+                                <li class="flex items-center">✓ Corporate Tax Strategy Filings</li>
+                                <li class="flex items-center">✓ Shareholder Tracking & K-1s</li>
+                                <li class="flex items-center">✓ Reasonable Compensation Analysis</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-200">
+                <div class="bg-white border-2 border-gray-400 p-4 rounded text-center text-xs text-gray-700 space-y-1">
                     <div>
-                        <h3 class="text-xl font-bold text-ocean-deep mb-2">Partnerships & LLCs</h3>
-                        <p class="text-sm text-gray-500 mb-4">Form 1065 / CA Form 568</p>
-                        <div class="mb-6">
-                            <span class="text-3xl font-extrabold text-ocean">$1,500</span>
-                            <span class="text-gray-400 text-sm"> / starting baseline</span>
-                        </div>
-                        <ul class="space-y-3 text-sm text-gray-600 mb-6">
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Multi-Member Business Entities</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Partner Schedule K-1 Generation</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>CA Franchise Tax Board Tracking</li>
-                        </ul>
+                        💼 <strong>Fiduciary Trust & Estate Tax Returns (Form 1041):</strong> Scoped individually due to specific asset parameters. Rates begin at a baseline of <strong>$1,200</strong>.
                     </div>
-                </div>
-
-                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-200">
-                    <div>
-                        <h3 class="text-xl font-bold text-ocean-deep mb-2">S-Corp & C-Corp</h3>
-                        <p class="text-sm text-gray-500 mb-4">Form 1120 / 1120-S</p>
-                        <div class="mb-6">
-                            <span class="text-3xl font-extrabold text-ocean">$1,800</span>
-                            <span class="text-gray-400 text-sm"> / starting baseline</span>
-                        </div>
-                        <ul class="space-y-3 text-sm text-gray-600 mb-6">
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Corporate Tax Strategy Filings</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Shareholder Tracking & K-1s</li>
-                            <li class="flex items-start"><i data-lucide="check" class="w-4 h-4 text-seafoam mt-0.5 mr-2 shrink-0"></i>Reasonable Compensation Analysis</li>
-                        </ul>
+                    <div class="text-gray-500 italic">
+                        All document preparation fees are formally quoted and confirmed prior to final client signature and electronic filing.
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 text-sm text-gray-600 max-w-2xl mx-auto space-y-3">
-                <div>
-                    💼 <strong>Fiduciary Trust & Estate Tax Returns (Form 1041):</strong> Scoped individually due to specific asset parameters. Rates begin at a baseline of <strong>$1,200</strong>.
-                </div>
-                <div class="text-xs text-gray-500 italic">
-                    All document preparation fees are formally quoted and confirmed prior to final client signature and electronic filing.
-                </div>
+        <!-- Portal Info Section -->
+        <section id="portal" class="y2k-window">
+            <div class="y2k-title-bar">
+                <span>🔒 TaxDome_Secure_Portal_Gateway.exe</span>
             </div>
-        </div>
-    </section>
-    
-    <section id="portal" class="py-16 md:py-24 bg-gradient-to-br from-sand-light to-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-sand/20">
-                <div class="text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold text-ocean-deep mb-6">
+            <div class="p-6 md:p-8 bg-[#ece9d8]">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-4">
                         Seamless, Secure Client Experience.
                     </h2>
-                    <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+                    <p class="text-sm md:text-base text-gray-700 mb-6">
                         All secure communication, document uploads, and task management is handled through our integrated, professional portal, powered by TaxDome.
                     </p>
-                    <div class="bg-seafoam/10 border-l-4 border-seafoam rounded-lg p-6 mb-8">
-                        <p class="text-gray-700">
-                            <strong>Portal Access:</strong> Our secure client portal is hosted at 
-                            <a href="https://nybergfinancial.taxdome.com" class="text-ocean hover:underline font-semibold">
-                                nybergfinancial.taxdome.com
-                            </a>
-                            where you can access your TaxDome account.
-                        </p>
+
+                    <div class="bg-white border-2 border-blue-400 p-4 rounded mb-6 text-sm">
+                        <strong>Portal Access:</strong> Our secure client portal is hosted at 
+                        <a href="https://nybergfinancial.taxdome.com" class="text-blue-700 underline font-bold">
+                            nybergfinancial.taxdome.com
+                        </a> 
+                        where you can access your TaxDome account.
                     </div>
-                    <div class="grid md:grid-cols-3 gap-6 mb-8">
-                        <div class="text-center">
-                            <div class="flex justify-center mb-3">
-                                <i data-lucide="shield-check" class="w-10 h-10 text-ocean"></i>
-                            </div>
-                            <h4 class="font-semibold text-ocean-deep mb-2">Bank-Level Security</h4>
-                            <p class="text-sm text-gray-600">Your data is protected with enterprise-grade encryption</p>
+
+                    <div class="grid md:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-white border-2 border-gray-300 p-4 rounded">
+                            <div class="text-2xl mb-1">🛡️</div>
+                            <h4 class="font-bold text-blue-900 mb-1 text-sm">Bank-Level Security</h4>
+                            <p class="text-xs text-gray-600">Your data is protected with enterprise-grade encryption</p>
                         </div>
-                        <div class="text-center">
-                            <div class="flex justify-center mb-3">
-                                <i data-lucide="upload-cloud" class="w-10 h-10 text-ocean"></i>
-                            </div>
-                            <h4 class="font-semibold text-ocean-deep mb-2">Easy Document Sharing</h4>
-                            <p class="text-sm text-gray-600">Upload and access files securely anytime, anywhere</p>
+                        <div class="bg-white border-2 border-gray-300 p-4 rounded">
+                            <div class="text-2xl mb-1">☁️</div>
+                            <h4 class="font-bold text-blue-900 mb-1 text-sm">Easy Document Sharing</h4>
+                            <p class="text-xs text-gray-600">Upload and access files securely anytime, anywhere</p>
                         </div>
-                        <div class="text-center">
-                            <div class="flex justify-center mb-3">
-                                <i data-lucide="message-circle" class="w-10 h-10 text-ocean"></i>
-                            </div>
-                            <h4 class="font-semibold text-ocean-deep mb-2">Direct Communication</h4>
-                            <p class="text-sm text-gray-600">Message your CPA team directly within the secure portal</p>
+                        <div class="bg-white border-2 border-gray-300 p-4 rounded">
+                            <div class="text-2xl mb-1">💬</div>
+                            <h4 class="font-bold text-blue-900 mb-1 text-sm">Direct Communication</h4>
+                            <p class="text-xs text-gray-600">Message your CPA team directly within the secure portal</p>
                         </div>
                     </div>
-                    <a href="https://nybergfinancial.taxdome.com" 
-                       class="inline-block bg-seafoam hover:bg-seafoam/90 text-ocean-deep font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
-                        Access Client Portal
+
+                    <a href="https://nybergfinancial.taxdome.com" class="y2k-button y2k-btn-primary inline-block text-base px-8 py-3 rounded">
+                        Access Client Portal Now ➔
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <section id="about" class="py-16 md:py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-ocean-deep mb-6">About Us</h2>
-            <div class="mb-8">
-                <p class="text-xl font-semibold text-ocean mb-2">Serving San Diego Since 1978</p>
-                <div class="w-24 h-1 bg-seafoam mx-auto rounded-full"></div>
+        </section>
+
+        <!-- About Us -->
+        <section id="about" class="y2k-window">
+            <div class="y2k-title-bar">
+                <span>📜 About_Nyberg_Financial.txt</span>
             </div>
-            <p class="text-lg text-gray-600 mb-6">
-                For over four decades, Nyberg Financial has been a trusted partner for individuals and business owners throughout the San Diego area. Led by Cameron Attisha, CPA, we believe in building lasting relationships with our clients through transparency, technical expertise, and modern digital convenience.
-            </p>
-            <p class="text-lg text-gray-600">
-                Whether you're an individual seeking efficient tax preparation or a business owner looking for strategic tax guidance, we're here to simplify your tax experience and help you achieve your goals with confidence.
-            </p>
-        </div>
-    </section>
-    
-    <section id="contact" class="py-16 md:py-24 bg-sand-light">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-ocean-deep mb-4">Get In Touch</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    To ensure accurate work and uninterrupted focus on your files during high-volume tax periods, all consultations must be scheduled in advance.
+            <div class="p-6 md:p-8 bg-white text-center max-w-4xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-2">About Us</h2>
+                <p class="text-lg font-bold text-blue-600 mb-4">Serving San Diego Since 1978</p>
+                <div class="w-32 h-1 bg-yellow-400 mx-auto mb-6"></div>
+
+                <p class="text-sm md:text-base text-gray-700 mb-4 leading-relaxed">
+                    For over four decades, Nyberg Financial has been a trusted partner for individuals and business owners throughout the San Diego area. Led by Cameron Attisha, CPA, we believe in building lasting relationships with our clients through transparency, technical expertise, and modern digital convenience.
+                </p>
+                <p class="text-sm md:text-base text-gray-700 leading-relaxed">
+                    Whether you're an individual seeking efficient tax preparation or a business owner looking for strategic tax guidance, we're here to simplify your tax experience and help you achieve your goals with confidence.
                 </p>
             </div>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-start">
-                
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="text-2xl font-semibold text-ocean-deep mb-2">Cameron Attisha, CPA</h3>
-                        <p class="text-gray-600 font-medium">Owner & Principal</p>
-                    </div>
+        </section>
 
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-seafoam/20 p-3 rounded-full">
-                                <i data-lucide="calendar" class="w-6 h-6 text-ocean"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h4 class="text-lg font-semibold text-ocean-deep">Consultations</h4>
-                                <p class="text-sm text-gray-600 mt-1 mb-3">By appointment only via Google Meet video conferencing. Select a convenient time slot below.</p>
-                                <a href="https://calendar.app.google/27Zk52rCAsiT2n618" target="_blank" class="inline-flex items-center text-sm font-semibold text-white bg-ocean hover:bg-ocean-deep px-4 py-2 rounded-lg transition-colors">
-                                    <span>Schedule a Consultation</span>
-                                    <i data-lucide="calendar" class="w-4 h-4 ml-1.5"></i>
+        <!-- Contact Section -->
+        <section id="contact" class="y2k-window">
+            <div class="y2k-title-bar">
+                <span>✉️ Contact_Form_v2.0.exe</span>
+            </div>
+            <div class="p-6 md:p-8 bg-[#ece9d8]">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-2">Get In Touch</h2>
+                    <p class="text-sm md:text-base text-gray-700 max-w-2xl mx-auto">
+                        To ensure accurate work and uninterrupted focus on your files during high-volume tax periods, all consultations must be scheduled in advance.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <!-- Contact Details -->
+                    <div class="space-y-4">
+                        <div class="bg-white border-2 border-gray-400 p-4 rounded">
+                            <h3 class="text-lg font-bold text-blue-900">Cameron Attisha, CPA</h3>
+                            <p class="text-xs text-gray-600 font-bold">Owner & Principal</p>
+                        </div>
+
+                        <div class="bg-white border-2 border-gray-400 p-4 rounded flex items-start space-x-3">
+                            <div class="text-2xl">📅</div>
+                            <div>
+                                <h4 class="font-bold text-sm text-blue-900">Consultations</h4>
+                                <p class="text-xs text-gray-600 mb-2">By appointment only via Google Meet video conferencing.</p>
+                                <a href="https://calendar.app.google/27Zk52rCAsiT2n618" target="_blank" class="y2k-button inline-block text-xs px-3 py-1">
+                                    Schedule a Consultation ➔
                                 </a>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-seafoam/20 p-3 rounded-full">
-                                <i data-lucide="mail" class="w-6 h-6 text-ocean"></i>
-                            </div>
+                        <div class="bg-white border-2 border-gray-400 p-4 rounded flex items-start space-x-3">
+                            <div class="text-2xl">📧</div>
                             <div>
-                                <h4 class="text-lg font-semibold text-ocean-deep">Email</h4>
-                                <a href="mailto:cameron@attishacpa.com" class="text-ocean hover:text-seafoam transition-colors mt-1 block font-medium">
+                                <h4 class="font-bold text-sm text-blue-900">Email</h4>
+                                <a href="mailto:cameron@attishacpa.com" class="text-xs text-blue-700 font-bold underline">
                                     cameron@attishacpa.com
                                 </a>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-seafoam/20 p-3 rounded-full">
-                                <i data-lucide="map-pin" class="w-6 h-6 text-ocean"></i>
-                            </div>
+                        <div class="bg-white border-2 border-gray-400 p-4 rounded flex items-start space-x-3">
+                            <div class="text-2xl">📍</div>
                             <div>
-                                <h4 class="text-lg font-semibold text-ocean-deep">Mailing Address</h4>
-                                <p class="text-gray-600 mt-1">
+                                <h4 class="font-bold text-sm text-blue-900">Mailing Address</h4>
+                                <p class="text-xs text-gray-600">
                                     10723 Prospect Ave<br>
                                     Santee, CA 92071
                                 </p>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <form action="https://formspree.io/f/mnnevezq" method="POST" class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-                    <div class="space-y-6">
+                    <!-- Contact Form -->
+                    <form action="https://formspree.io/f/mnnevezq" method="POST" class="bg-white border-2 border-gray-400 p-6 rounded space-y-4">
                         <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                            <input type="text" name="name" id="name" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ocean focus:border-transparent transition duration-200 outline-none placeholder-gray-400"
-                                placeholder="John Doe">
+                            <label for="name" class="block text-xs font-bold text-gray-700 mb-1">Full Name:</label>
+                            <input type="text" name="name" id="name" required class="w-full p-2 text-sm y2k-input" placeholder="John Doe">
                         </div>
 
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                            <input type="email" name="email" id="email" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ocean focus:border-transparent transition duration-200 outline-none placeholder-gray-400"
-                                placeholder="john@example.com">
+                            <label for="email" class="block text-xs font-bold text-gray-700 mb-1">Email Address:</label>
+                            <input type="email" name="email" id="email" required class="w-full p-2 text-sm y2k-input" placeholder="john@example.com">
                         </div>
 
                         <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number (Optional)</label>
-                            <input type="tel" name="phone" id="phone"
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ocean focus:border-transparent transition duration-200 outline-none placeholder-gray-400"
-                                placeholder="(555) 123-4567">
+                            <label for="phone" class="block text-xs font-bold text-gray-700 mb-1">Phone Number (Optional):</label>
+                            <input type="tel" name="phone" id="phone" class="w-full p-2 text-sm y2k-input" placeholder="(555) 123-4567">
                         </div>
 
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">How can we help?</label>
-                            <textarea name="message" id="message" rows="4" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-ocean focus:border-transparent transition duration-200 outline-none placeholder-gray-400"
-                                placeholder="Please describe your tax preparation or planning needs..."></textarea>
+                            <label for="message" class="block text-xs font-bold text-gray-700 mb-1">How can we help?</label>
+                            <textarea name="message" id="message" rows="4" required class="w-full p-2 text-sm y2k-input" placeholder="Please describe your tax preparation or planning needs..."></textarea>
                         </div>
 
-                        <button type="submit" 
-                            class="w-full bg-ocean hover:bg-ocean-deep text-white font-bold py-4 rounded-lg shadow-md hover:shadow-lg transform transition-all duration-200 flex justify-center items-center">
-                            <span>Send Message</span>
-                            <i data-lucide="send" class="w-5 h-5 ml-2"></i>
+                        <button type="submit" class="w-full y2k-button y2k-btn-primary py-3 text-base">
+                            Send Message ✉️
                         </button>
-                    </div>
-                </form>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-            </div>
-        </div>
-    </section>
-    
-    <footer class="bg-ocean-deep text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <p class="text-lg font-semibold mb-2">Nyberg Financial</p>
-                <p class="text-gray-300 mb-2">10723 Prospect Ave, Santee, CA 92071</p>
-                <p class="text-sm text-seafoam font-medium mb-4">Serving the community since 1978</p>
-                <p class="text-sm text-gray-400">
-                    &copy; 2026 Nyberg Financial Services, Inc. All rights reserved.
-                </p>
-            </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 max-w-7xl mx-auto px-4">
+        <div class="bg-[#123075] text-white p-6 border-2 border-blue-300 rounded text-center text-xs space-y-2">
+            <p class="text-sm font-bold text-yellow-300">Nyberg Financial</p>
+            <p>10723 Prospect Ave, Santee, CA 92071</p>
+            <p class="text-green-300">Serving the community since 1978</p>
+            <p class="text-gray-300 pt-2 border-t border-blue-800">
+                &copy; 2026 Nyberg Financial Services, Inc. All rights reserved.
+            </p>
         </div>
     </footer>
-    
+
     <script>
         // Initialize Lucide icons
         lucide.createIcons();
@@ -453,7 +557,6 @@
             mobileMenu.classList.toggle('hidden');
         });
         
-        // Close mobile menu when clicking on a link
         const mobileMenuLinks = mobileMenu.querySelectorAll('a');
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -468,7 +571,7 @@
                 if (href !== '#' && document.querySelector(href)) {
                     e.preventDefault();
                     const target = document.querySelector(href);
-                    const offsetTop = target.offsetTop - 64; // Account for fixed nav height
+                    const offsetTop = target.offsetTop - 55;
                     
                     window.scrollTo({
                         top: offsetTop,
